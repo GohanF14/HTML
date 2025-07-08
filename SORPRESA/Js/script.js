@@ -70,7 +70,7 @@ function getURLParam(name) {
 function showDedicationText() { //seguidores
   let text = getURLParam('text');
   if (!text) {
-    text = `Para el amor de mi vida:\n\nDesde el primer momento supe que eras tú. Tu sonrisa, tu voz, tu forma de ser… todo en ti me hace sentir en casa.\n\nGracias por acompañarme en cada paso, por entenderme incluso en silencio, y por llenar mis días de amor.\n\nTe amo más de lo que las palabras pueden expresar.`;  } else {
+    text = `Para la personita que me maltrata:\n\n>Hoy se cumplen 5 meses desde que llegaste a mi vida, y desde entonces no he dejado de sonreír.\n\nHan sido 5 meses de amor, de miradas que lo dicen todo, de abrazos que curan el alma.\n\nCinco meses siendo el más feliz, porque cada día contigo es un regalo.\n\nHemos compartido risas, locuras, sueños y hasta silencios hermosos, pero lo más bonito es que cada día te quiero más.\n\nGracias por estos cinco meses, amor. Y que vengan muchos más… `;  } else {
     text = decodeURIComponent(text).replace(/\\n/g, '\n');
   }
   const container = document.getElementById('dedication-text');
@@ -101,7 +101,7 @@ function showSignature() {
     dedication.appendChild(signature);
   }
   let firma = getURLParam('firma');
-  signature.textContent = firma ? decodeURIComponent(firma) : "Con amor, Zero";
+  signature.textContent = firma ? decodeURIComponent(firma) : "De Gohan xd";
   signature.classList.add('visible');
 }
 
@@ -146,8 +146,8 @@ function showCountdown() {
   const container = document.getElementById('countdown');
   let startParam = getURLParam('start');
   let eventParam = getURLParam('event');
-  let startDate = startParam ? new Date(startParam + 'T00:00:00') : new Date('2024-08-03T00:00:00'); 
-  let eventDate = eventParam ? new Date(eventParam + 'T00:00:00') : new Date('2025-08-03T00:00:00');
+  let startDate = startParam ? new Date(startParam + 'T00:00:00') : new Date('2025-02-08T19:30:00'); 
+  let eventDate = eventParam ? new Date(eventParam + 'T00:00:00') : new Date('2025-07-08T19:30:00');
 
   function update() {
     const now = new Date();
