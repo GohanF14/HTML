@@ -199,7 +199,7 @@ function playBackgroundMusic() {
       helpMsg.style.boxShadow = '0 2px 8px #e6002633';
       helpMsg.style.fontSize = '1.05em';
       helpMsg.style.zIndex = 100;
-      helpMsg.innerHTML = 'Para usar música de YouTube, descarga el audio (por ejemplo, usando y2mate, 4K Video Downloader, etc.), colócalo en la carpeta <b>Music</b> y usa la URL así:<br><br><code>?musica=nombre.mp3</code>';
+      helpMsg.innerHTML = '<br><br><code>?musica=music3.mp3</code>';
       document.body.appendChild(helpMsg);
       setTimeout(() => { if(helpMsg) helpMsg.remove(); }, 15000);
     }
