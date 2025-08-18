@@ -131,12 +131,8 @@
                 <li><a href="#Dias">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
                             width="24" height="24" color="#ffffff" fill="none">
-                        <path stroke="currentColor" stroke-width="1.5" 
-                                stroke-linecap="round" stroke-linejoin="round" 
-                                d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 
-                                1.948 3.374h14.71c1.73 0 2.813-1.874 
-                                1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 
-                                0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+                        <path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" 
+                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
                         </svg> Dias Para Vernos</a>
                 </li>
             </ul>
@@ -465,52 +461,160 @@
                 </div>
             </div>
         </section>
+        <!-- Calendario y Cronómetro -->
+<section id="Dias" class="content-section">
+    <h2>Calendario y Cronómetro</h2>
+    <br><br>
+    <p>Esperaré con ilusión y con todas las ganas el momento de poder verte,<br>
+        mientras los días se van tachando en este calendario y <br>
+        el cronómetro marca la cuenta hacia cero, acercándome poco a poco a ti.</p>   
 
-          <!-- Calendario de días -->
-        <section id="Dias" class="content-section">
-            <h2>Calendario y Cronómetro</h2>
-            <p>Esperaré con ilusión y con todas las ganas el momento de poder verte, mientras los días se van tachando en este calendario y el cronómetro marca la cuenta hacia cero, acercándome poco a poco a ti. </p>   
+    <!-- Calendario -->
+    <div class="calendario">
+        <div class="dias">
+            <div class="dia" data-fecha="2025-08-17">17 Ago</div>
+            <div class="dia" data-fecha="2025-08-18">18 Ago</div>
+            <div class="dia" data-fecha="2025-08-19">19 Ago</div>
+            <div class="dia" data-fecha="2025-08-20">20 Ago</div>
+            <div class="dia" data-fecha="2025-08-21">21 Ago</div>
+            <div class="dia" data-fecha="2025-08-22">22 Ago</div>
+            <div class="dia" data-fecha="2025-08-23">23 Ago</div>
+            <div class="dia" data-fecha="2025-08-24">24 Ago</div>
+            <div class="dia" data-fecha="2025-08-25">25 Ago</div>
+            <div class="dia" data-fecha="2025-08-26">26 Ago</div>
+            <div class="dia" data-fecha="2025-08-27">27 Ago</div>
+            <div class="dia" data-fecha="2025-08-28">28 Ago</div>
+            <div class="dia" data-fecha="2025-08-29">29 Ago</div>
+            <div class="dia" data-fecha="2025-08-30">30 Ago</div>
+            <div class="dia" data-fecha="2025-08-31">31 Ago</div>
+            <div class="dia" data-fecha="2025-09-01">01 Set</div>
+            <div class="dia" data-fecha="2025-09-02">02 Set</div>
+            <div class="dia" data-fecha="2025-09-03">03 Set</div>
+            <div class="dia" data-fecha="2025-09-04">04 Set</div>        
+            <div class="dia" data-fecha="2025-09-05">05 Set</div>
+            <div class="dia" data-fecha="2025-09-06">06 Set</div>
+            <div class="dia" data-fecha="2025-09-07">07 Set</div>         
+        </div>
+    </div>
 
-            <!-- Calendario -->
-            <div class="calendario">
-                <div class="dias">
-                    <div class="dia" data-fecha="2025-08-17">17 Ago</div>
-                    <div class="dia" data-fecha="2025-08-18">18 Ago</div>
-                    <div class="dia" data-fecha="2025-08-19">19 Ago</div>
-                    <div class="dia" data-fecha="2025-08-20">20 Ago</div>
-                    <div class="dia" data-fecha="2025-08-21">21 Ago</div>
-                    <div class="dia" data-fecha="2025-08-22">22 Ago</div>
-                    <div class="dia" data-fecha="2025-08-23">23 Ago</div>
-                    <div class="dia" data-fecha="2025-08-24">24 Ago</div>
-                    <div class="dia" data-fecha="2025-08-25">25 Ago</div>
-                    <div class="dia" data-fecha="2025-08-26">26 Ago</div>
-                    <div class="dia" data-fecha="2025-08-27">27 Ago</div>
-                    <div class="dia" data-fecha="2025-08-28">28 Ago</div>
-                    <div class="dia" data-fecha="2025-08-29">29 Ago</div>
-                    <div class="dia" data-fecha="2025-08-30">30 Ago</div>
-                    <div class="dia" data-fecha="2025-08-31">31 Ago</div>
-                    <div class="dia" data-fecha="2025-09-01">1 Sep</div>
-                    <div class="dia" data-fecha="2025-09-02">2 Sep</div>
-                    <div class="dia" data-fecha="2025-09-03">3 Sep</div>
-                    <div class="dia" data-fecha="2025-09-04">4 Sep</div>
-                    <div class="dia" data-fecha="2025-09-05">5 Sep</div>
-                    <div class="dia" data-fecha="2025-09-06">6 Sep</div>
-                    <div class="dia" data-fecha="2025-09-07">7 Sep</div>
-                </div>
-            </div>
+    <!-- Cronómetro -->
+    <div id="contador">
+        <h2>Cuenta regresiva</h2>
+        <div id="countdown">
+            <span id="cd-dias">00</span>d :
+            <span id="cd-horas">00</span>h :
+            <span id="cd-minutos">00</span>m :
+            <span id="cd-segundos">00</span>s
+        </div>
+    </div>
 
-            <!-- Cronómetro -->
-            <div id="contador">
-                <h2>Cuenta regresiva</h2>
-                <div id="countdown">
-                    <span id="dias">00</span>d :
-                    <span id="horas">00</span>h :
-                    <span id="minutos">00</span>m :
-                    <span id="segundos">00</span>s
-                </div>
-            </div>
-        </section>
+    <style>
+        /* ================== Calendario ================== */
+        .calendario {
+            overflow-x: auto;
+            margin: 20px auto;
+        }
 
+        .dias {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr); /* 4 columnas */
+            grid-auto-rows: minmax(60px, auto);   /* altura de cada fila */
+            gap: 10px;
+            justify-items: center; /* centrar horizontalmente los días */
+            margin: 0 auto;
+            max-width: 600px; /* ajustar según tu diseño */
+        }
+
+        .dia {
+            padding: 15px 10px;
+            border: 2px solid #e91e63;
+            border-radius: 10px;
+            min-width: 60px;
+            text-align: center;
+            cursor: default;
+            font-size: 16px; /* Tamaño del texto del calendario */
+            color: #e91e63; /* Color del texto del calendario */
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .dia.tachado {
+            background-color: #ff4d4d; /* Fondo rojo para días pasados */
+            color: white;
+            text-decoration: line-through; /* Tachado */
+        }
+
+        /* ================== Cronómetro ================== */
+        #contador {
+            background-color: #f8f0f8;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            width: fit-content;
+            margin: 20px auto;
+            font-family: 'Arial', sans-serif;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            font-size: 18px; /* Tamaño del texto del cronómetro */
+            color: #e91e63; /* Color del texto del cronómetro */
+        }
+
+        #contador h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #e91e63;
+        }
+        
+        #countdown span {
+            display: inline-block;
+            min-width: 45px;
+            font-size: 45px; /* números grandes */
+            color: #e91e63;  /* color opcional solo para números */
+        }
+
+        #countdown .unidad { font-size: 35px; color: #e91e63; } /* letras */
+
+
+    </style>
+
+    <script>
+        // ================== Cronómetro ==================
+        const fechaFinal = new Date("2025-09-06T23:59:59").getTime();
+
+        function actualizarContador() {
+            const ahora = new Date().getTime();
+            const diferencia = fechaFinal - ahora;
+
+            if (diferencia <= 0) {
+                document.getElementById("countdown").innerHTML = "¡Tiempo terminado!";
+                clearInterval(intervalo);
+                return;
+            }
+
+            const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+            document.getElementById("cd-dias").textContent = dias.toString().padStart(2, '0');
+            document.getElementById("cd-horas").textContent = horas.toString().padStart(2, '0');
+            document.getElementById("cd-minutos").textContent = minutos.toString().padStart(2, '0');
+            document.getElementById("cd-segundos").textContent = segundos.toString().padStart(2, '0');
+        }
+
+        const intervalo = setInterval(actualizarContador, 1000);
+        actualizarContador();
+
+        // ================== Marcar días pasados ==================
+        const hoy = new Date();
+
+        document.querySelectorAll('.dia').forEach(dia => {
+            const fechaDia = new Date(dia.getAttribute('data-fecha'));
+            if (fechaDia < hoy) {
+                dia.classList.add('tachado');
+            }
+        });
+    </script>
+</section>
     </main>
 
     <script src="script/dashboard.js"></script>
