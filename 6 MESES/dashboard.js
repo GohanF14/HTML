@@ -212,3 +212,30 @@ document.getElementById('sorpresa-btn').addEventListener('click', function() {
     contenido.classList.toggle('hidden'); // Muestra u oculta la sorpresa
 });
 
+
+// JavaScript para mostrar el calendario
+
+// Obtener la fecha de hoy en formato YYYY-MM-DD
+const hoy = new Date().toISOString().split("T")[0];
+
+// Seleccionar todos los cuadritos del calendario
+document.querySelectorAll(".dia").forEach(dia => {
+    const fecha = dia.getAttribute("data-fecha");
+
+    // Si la fecha ya pasó → tachar
+    if (fecha < hoy) {
+        dia.textContent += " ❌";
+        dia.style.textDecoration = "line-through";
+        dia.style.color = "red";
+    }
+
+    // Si es hoy → resaltar
+    if (fecha === hoy) {
+        dia.style.backgroundColor = "lightgreen";
+        dia.style.fontWeight = "bold";
+        dia.style.border = "2px solid green";
+    }
+});
+
+
+

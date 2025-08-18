@@ -846,3 +846,43 @@ audio {
         display: flex; /* Mostrar en móviles */
     }
 }
+
+/* Contenedor principal del calendario */
+.calendario {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Contenedor de los días */
+.calendario .dias {
+    display: flex;
+    flex-wrap: wrap;   /* Para que salte a la siguiente línea si no entran */
+    gap: 10px;         /* Espacio entre cuadritos */
+    justify-content: center; /* Centrar los días */
+}
+
+/* Cada cuadrito */
+.calendario .dia {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    width: 60px;        /* Ancho del cuadrito */
+    height: 60px;       /* Alto del cuadrito */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;    /* Tamaño del texto */
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+/* Efecto al pasar el mouse */
+.calendario .dia:hover {
+    background-color: #ffe0e0;
+    border-color: #ff7b7b;
+    transform: scale(1.05);
+}
+
+
+
