@@ -885,4 +885,31 @@ audio {
 }
 
 
+/* ====== Cronómetro ====== */
+#contador {
+  margin-top: 40px;
+  text-align: center;
+}
+
+#countdown {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #e63946; /* rojo para destacar */
+  background: #fef2f2;
+  padding: 20px;
+  border-radius: 15px;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Efecto de tachado */
+.dia.tachado {
+    text-decoration: line-through;
+    color: #aaa;
+    background-color: #f8d7da; /* leve rosado para destacar */
+    border-color: #f5c2c7;
+}
+
+
 

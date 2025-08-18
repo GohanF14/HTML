@@ -215,27 +215,50 @@ document.getElementById('sorpresa-btn').addEventListener('click', function() {
 
 // JavaScript para mostrar el calendario
 
-// Obtener la fecha de hoy en formato YYYY-MM-DD
-const hoy = new Date().toISOString().split("T")[0];
+// ---------------- CRONÓMETRO ---------------- //
+function iniciarCuentaRegresiva() {
+    const fechaObjetivo = new Date("2025-09-07T00:00:00").getTime();
 
-// Seleccionar todos los cuadritos del calendario
-document.querySelectorAll(".dia").forEach(dia => {
-    const fecha = dia.getAttribute("data-fecha");
+    function actualizar() {
+        const ahora = new Date().getTime();
+        const distancia = fechaObjetivo - ahora;
 
-    // Si la fecha ya pasó → tachar
-    if (fecha < hoy) {
-        dia.textContent += " ❌";
-        dia.style.textDecoration = "line-through";
-        dia.style.color = "red";
+        if (distancia <= 0) {
+            document.getElementById("countdown").innerHTML = "¡Ya llegó el día 🎉!";
+            clearInterval(intervalo);
+            return;
+        }
+
+        const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+        document.getElementById("dias").innerText = dias.toString().padStart(2, "0");
+        document.getElementById("horas").innerText = horas.toString().padStart(2, "0");
+        document.getElementById("minutos").innerText = minutos.toString().padStart(2, "0");
+        document.getElementById("segundos").innerText = segundos.toString().padStart(2, "0");
     }
 
-    // Si es hoy → resaltar
-    if (fecha === hoy) {
-        dia.style.backgroundColor = "lightgreen";
-        dia.style.fontWeight = "bold";
-        dia.style.border = "2px solid green";
-    }
+    actualizar(); // primera ejecución inmediata
+    const intervalo = setInterval(actualizar, 1000);
+}
+
+// ---------------- CALENDARIO (tachar días) ---------------- //
+function tacharDiasPasados() {
+    const hoy = new Date().setHours(0, 0, 0, 0); // solo fecha sin horas
+    document.querySelectorAll(".dia").forEach(dia => {
+        const fecha = new Date(dia.getAttribute("data-fecha")).setHours(0, 0, 0, 0);
+        if (fecha < hoy) {
+            dia.classList.add("tachado");
+        }
+    });
+}
+
+// ---------------- EJECUTAR AL CARGAR ---------------- //
+document.addEventListener("DOMContentLoaded", () => {
+    iniciarCuentaRegresiva();
+    tacharDiasPasados();
 });
-
 
 
