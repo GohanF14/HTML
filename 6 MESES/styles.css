@@ -848,6 +848,13 @@ audio {
 }
 
 /*PARA LOS DETALLES*/
+.contenedor-cartas{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ← 3 columnas fijas */
+    gap: 28px;
+    padding: 25px;
+    animation: fadeIn 1s ease;
+}
 
 .card {
     background: var(--color-secondary);
@@ -880,6 +887,12 @@ audio {
 .card:hover {
     transform: scale(1.04);
     box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+/* ♡ Animación de entrada */
+@keyframes fadeIn{
+    from{ opacity: 0; transform: translateY(25px); }
+    to{ opacity: 1; transform: translateY(0); }
 }
 
 /* Modo oscuro */
