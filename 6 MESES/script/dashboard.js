@@ -202,3 +202,7 @@ document.getElementById('sorpresa-btn').addEventListener('click', function() {
     contenido.classList.toggle('hidden'); // Muestra u oculta la sorpresa
 });
 
+
+function irA(link) {
+    window.open(link, "_blank"); // abre en pestaña nueva
+}
