@@ -118,3 +118,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // Marcar que el usuario ha visto el tour
     localStorage.setItem('tourVisto', 'true');
 });
+
+
+function irA(link) {
+    window.open(link, "_blank"); // abre en pestaña nueva
+}
+
+

@@ -846,3 +846,46 @@ audio {
         display: flex; /* Mostrar en móviles */
     }
 }
+
+/*PARA LOS DETALLES*/
+
+.card {
+    background: var(--color-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    transition: transform .25s, box-shadow .25s;
+}
+
+.card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin: 12px;
+    padding: 0 5px;
+}
+
+.card .precio {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 14px;
+    color: #ffffff;
+}
+
+.card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+/* Modo oscuro */
+.dark-mode #detalles {
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+
