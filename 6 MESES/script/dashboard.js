@@ -141,13 +141,23 @@ particlesJS("particles-js", {
 });
 
 const mensajes = [
-    "Eres mi razón de sonreír cada día. 💖",
-    "Contigo, cada momento es especial. 🌟",
-    "Tu amor es mi mayor tesoro. 🏆",
-    "Eres mi hoy, mi mañana y mi siempre. 🌹",
-    "Gracias por hacerme tan feliz. 😊",
-    "Eres la mejor parte de mi día. ☀️",
-    "Mi corazón late por ti. 💓",
+      "Eres mi razón de sonreír cada día. 💖",
+      "Contigo, cada momento es especial. 🌟",
+      "Tu amor es mi mayor tesoro. 🏆",
+      "Eres mi hoy, mi mañana y mi siempre. 🌹",
+      "Gracias por hacerme tan feliz. 😊",
+      "Eres la mejor parte de mi día. ☀️",
+      "Mi corazón late por ti. 💓",
+      "Eres mi refugio y mi paz. 🏡💖",
+      "A tu lado, todo es más bonito. 🌸✨",
+      "Cada día contigo es un regalo. 🎁💕",
+      "Tu sonrisa ilumina mi mundo. 😍🌞",
+      "Eres mi aventura favorita. 🌍💫",
+      "El amor es perfecto… porque es contigo. ❤️",
+      "Mi lugar favorito siempre será junto a ti. 🛋️💓",
+      "Eres mi sueño hecho realidad. 🌙💖",
+      "Te elijo hoy, mañana y siempre. 💍✨",
+      "En tu abrazo encontré mi hogar. 🤗🏠"
 ];
 
 const mensajeTexto = document.getElementById("mensaje-texto");
