@@ -841,12 +841,27 @@ audio {
 /*PARA LOS DETALLES*/
 .contenedor-cartas{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* 3 columnas */
-    grid-template-rows: repeat(3, auto);    /* 3 filas */
+    grid-template-columns: repeat(3, 1fr);  /* 🖥 PC = 3 columnas */
     gap: 28px;
     padding: 25px;
     animation: fadeIn 1s ease;
 }
+
+/* 📌 Tablets → 2 columnas */
+@media (max-width: 900px){
+    .contenedor-cartas{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 📌 Celulares → 1 columna automática */
+@media (max-width: 600px){
+    .contenedor-cartas{
+        grid-template-columns: 1fr;  /* Ocupa todo el ancho */
+    }
+}
+
+
 .card {
     background: var(--color-secondary);
     color: var(--color-text-light); /* ← color del texto */
