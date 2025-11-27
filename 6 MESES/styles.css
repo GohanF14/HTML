@@ -1,16 +1,7 @@
 /**
- * DetalleParaTi
- * 
- * Este es una para que puedas dedicar a tu pareja o algun apersona en 
-  especial el cual tu quieras mucho y guardaras recuerdos que pasaste con esa persona.
- * 
- * Hecho por: [LuisKinnDC]
+ * Hecho por: [GohanF14]
  * Fecha: [26 DE FEBRERO]
- * Versión: 1.0
- * 
- * GitHub:
- * - https://github.com/LuisKinnDC
-
+ * Versión: 2.0
  */
 
 
@@ -850,14 +841,15 @@ audio {
 /*PARA LOS DETALLES*/
 .contenedor-cartas{
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* ← 3 columnas fijas */
+    grid-template-columns: repeat(3, 1fr);  /* 3 columnas */
+    grid-template-rows: repeat(3, auto);    /* 3 filas */
     gap: 28px;
     padding: 25px;
     animation: fadeIn 1s ease;
 }
-
 .card {
     background: var(--color-secondary);
+    color: var(--color-text-light); /* ← color del texto */
     border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
@@ -877,12 +869,6 @@ audio {
     padding: 0 5px;
 }
 
-.card .precio {
-    font-size: 17px;
-    font-weight: bold;
-    margin-bottom: 14px;
-    color: #ffffff;
-}
 
 .card:hover {
     transform: scale(1.04);
