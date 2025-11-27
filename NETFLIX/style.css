@@ -29,12 +29,13 @@ body {
     background-color: #141414; /* Color al hacer scroll */
 }
 
-.logo {
-    color: #e50914; /* Rojo Netflix */
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-right: 30px;
+.logo { 
+    color: #e50914; /* Rojo Netflix */ 
+    font-size: 1.8rem; 
+    font-weight: bold; 
+    margin-right: 30px; 
 }
+
 
 nav a {
     color: #fff;
@@ -69,9 +70,19 @@ nav a:hover {
     cursor: pointer;
 }
 
-/* --- Banner Principal --- */
+/* --- Banner Principal (ACTUALIZADO) --- */
 .hero-banner {
-    background: url('https://via.placeholder.com/1920x800/e50914/ffffff?text=Banner+Destacado') center center / cover no-repeat;
+    /* 1. Degradado: Va de negro (izquierda) a transparente (derecha). La URL de la imagen se inyecta por JS */
+    background-image: 
+        linear-gradient(to right, rgba(20, 20, 20, 1) 10%, rgba(20, 20, 20, 0.7) 40%, rgba(20, 20, 20, 0) 100%),
+        /* Fallback o imagen inicial, aunque JS lo sobrescribe */
+        url('https://raw.githubusercontent.com/GohanF14/HTML/main/FOTOS/Fotos Dash/THOSE EYES.jpg');
+    
+    /* 2. Posición y Tamaño para enfocar la imagen a la derecha */
+    background-position: right top; 
+    background-size: 150vh; /* Se usa un tamaño más grande para que la imagen se vea más ancha */
+    background-repeat: no-repeat;
+    
     height: 90vh;
     display: flex;
     flex-direction: column;
