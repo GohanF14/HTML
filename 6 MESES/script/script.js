@@ -120,8 +120,5 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-function irA(link) {
-    window.open(link, "_blank"); // abre en pestaña nueva
-}
 
 

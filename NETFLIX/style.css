@@ -1,0 +1,208 @@
+/* Estilos Generales (Reinicio y Colores Base) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #141414; /* Fondo oscuro principal */
+    color: #fff; /* Texto blanco */
+}
+
+/* --- Encabezado --- */
+#main-header {
+    position: fixed; /* Fijo en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 4%;
+    z-index: 999;
+    background-color: transparent; /* Inicialmente transparente */
+    transition: background-color 0.4s ease; /* Transición para el efecto de scroll */
+}
+
+#main-header.scrolled {
+    background-color: #141414; /* Color al hacer scroll */
+}
+
+.logo {
+    color: #e50914; /* Rojo Netflix */
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ccc;
+}
+
+.user-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.user-actions span {
+    font-size: 1.2rem;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.profile-icon {
+    width: 30px;
+    height: 30px;
+    background-color: gray; /* Simula la imagen de perfil */
+    border-radius: 4px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* --- Banner Principal --- */
+.hero-banner {
+    background: url('https://via.placeholder.com/1920x800/e50914/ffffff?text=Banner+Destacado') center center / cover no-repeat;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 4% 150px 4%;
+    position: relative;
+}
+
+.hero-title {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    max-width: 500px;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-buttons .btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: opacity 0.3s;
+}
+
+.play-btn {
+    background-color: #fff;
+    color: #000;
+}
+
+.info-btn {
+    background-color: rgba(109, 109, 110, 0.7);
+    color: #fff;
+}
+
+.hero-buttons .btn:hover {
+    opacity: 0.8;
+}
+
+/* Sombra degradada en la parte inferior del banner */
+.hero-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7.4vw;
+    background-image: linear-gradient(180deg, transparent, rgba(20, 20, 20, 0.6) 50%, #141414);
+}
+
+/* --- Filas de Contenido (Carruseles) --- */
+.content-rows {
+    padding-bottom: 50px;
+}
+
+.movie-row {
+    margin-bottom: 40px;
+    padding-left: 4%;
+}
+
+.movie-row h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.row-posters {
+    display: flex;
+    overflow-x: scroll; /* Habilita el desplazamiento horizontal */
+    overflow-y: hidden;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+    /* Ocultar la barra de desplazamiento para navegadores basados en WebKit */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.row-posters::-webkit-scrollbar {
+    display: none;
+}
+
+.poster {
+    width: 250px; /* Ancho de los posters */
+    min-width: 250px;
+    height: 140px;
+    background-color: #2f2f2f; /* Color de fondo para placeholder */
+    margin-right: 8px;
+    transition: transform 0.2s;
+    cursor: pointer;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.poster:hover {
+    transform: scale(1.08); /* Efecto de zoom al pasar el ratón */
+    z-index: 10;
+}
+
+/* Ajustes para Móviles */
+@media (max-width: 768px) {
+    .hero-banner {
+        padding-top: 150px;
+        height: 60vh;
+        padding-bottom: 100px;
+    }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-description {
+        font-size: 0.9rem;
+    }
+    .movie-row h2 {
+        font-size: 1.2rem;
+    }
+    .poster {
+        width: 150px;
+        min-width: 150px;
+        height: 85px;
+    }
+    nav {
+        display: none; /* Ocultar el menú de navegación en móvil para simplificar */
+    }
+}
