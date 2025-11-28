@@ -1,0 +1,419 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 50px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.7) 10%, transparent);
+    transition: background-color 0.4s;
+}
+
+.header.scrolled {
+    background-color: #111;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #e50914;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #b3b3b3;
+}
+
+.sign-in-btn {
+    background: #e50914;
+    color: white;
+    border: none;
+    padding: 7px 17px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sign-in-btn:hover {
+    background: #f40612;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: 
+        linear-gradient(77deg, rgba(0,0,0,.6) 0%, transparent 85%),
+        linear-gradient(166deg, rgba(0,0,0,.5) 0%, transparent 60%),
+        linear-gradient(to right, rgba(0,0,0,.8) 0%, rgba(0,0,0,.4) 50%, rgba(0,0,0,.1) 100%),
+        url('./img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.2) 70%, transparent 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 950px;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3.125rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.hero h2 {
+    font-size: 1.625rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.email-signup {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.email-input {
+    flex: 1;
+    padding: 18px 16px;
+    font-size: 16px;
+    border: 1px solid #333;
+    border-radius: 4px 0 0 4px;
+    background: rgba(22, 22, 22, 0.7);
+    color: white;
+    outline: none;
+}
+
+.email-input::placeholder {
+    color: #8c8c8c;
+}
+
+.get-started-btn {
+    background: #e50914;
+    color: white;
+    border: none;
+    padding: 18px 26px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.get-started-btn:hover {
+    background: #f40612;
+}
+
+/* Features Section */
+.features {
+    padding: 70px 0;
+    background: #000;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 70px 45px;
+    border-bottom: 8px solid #222;
+}
+
+.feature:last-child {
+    border-bottom: none;
+}
+
+.feature-text {
+    flex: 1;
+    padding: 0 30px;
+}
+
+.feature-text h2 {
+    font-size: 3.125rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+}
+
+.feature-text p {
+    font-size: 1.625rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.feature-image {
+    flex: 1;
+    text-align: center;
+}
+
+.feature-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.feature.reverse {
+    flex-direction: row-reverse;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 70px 45px;
+    max-width: 815px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 3.125rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+    background: #2d2d2d;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 24px;
+    background: #2d2d2d;
+    color: white;
+    border: none;
+    font-size: 1.625rem;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+    background: #414141;
+}
+
+.faq-answer {
+    padding: 24px;
+    background: #2d2d2d;
+    font-size: 1.625rem;
+    line-height: 1.25;
+    display: none;
+    border-top: 1px solid #000;
+}
+
+.faq-answer.active {
+    display: block;
+}
+
+.plus-icon {
+    font-size: 2rem;
+    transition: transform 0.3s;
+}
+
+.plus-icon.rotate {
+    transform: rotate(45deg);
+}
+
+/* Footer */
+.footer {
+    background: #000;
+    padding: 70px 45px 30px;
+    color: #737373;
+}
+
+.footer-content {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.footer-links a {
+    color: #737373;
+    text-decoration: underline;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.footer-links a:hover {
+    text-decoration: none;
+}
+
+.service-code {
+    margin-bottom: 20px;
+}
+
+.service-code button {
+    background: transparent;
+    border: 1px solid #737373;
+    color: #737373;
+    padding: 8px 12px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .feature {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .feature.reverse {
+        flex-direction: column;
+    }
+    
+    .feature-text h2 {
+        font-size: 2.5rem;
+    }
+    
+    .feature-text p {
+        font-size: 1.25rem;
+    }
+    
+    .email-signup {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .email-input {
+        border-radius: 4px;
+    }
+    
+    .get-started-btn {
+        border-radius: 4px;
+    }
+    
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 740px) {
+    .header {
+        padding: 15px 20px;
+    }
+    
+    .nav-links {
+        gap: 15px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.25rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .feature {
+        padding: 50px 20px;
+    }
+    
+    .feature-text h2 {
+        font-size: 2rem;
+    }
+    
+    .feature-text p {
+        font-size: 1.125rem;
+    }
+    
+    .faq {
+        padding: 50px 20px;
+    }
+    
+    .faq h2 {
+        font-size: 2rem;
+    }
+    
+    .faq-question {
+        font-size: 1.125rem;
+        padding: 18px;
+    }
+    
+    .faq-answer {
+        font-size: 1.125rem;
+        padding: 18px;
+    }
+    
+    .footer {
+        padding: 50px 20px 20px;
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+    }
+}
